@@ -17,10 +17,6 @@ function App() {
     setNome(nome);
     setNomes((nomesAnteriores) => [...nomesAnteriores, nome]);
     setNome("");
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
     if (!ultimoNome) return;
     setNome(ultimoNome);
     setNomes((nomesAnteriores) => [...nomesAnteriores, ultimoNome]);
