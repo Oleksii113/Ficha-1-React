@@ -36,7 +36,12 @@ function App() {
         ></input>
         <button type="submit">Adicionar</button>
       </form>
-
+      <h2>A bela da lista de nomes</h2>
+      <ul>
+        {nomes.map((nomeAtual, index) => (
+          <li>{nomeAtual}</li>
+        ))}
+      </ul>
     </main>
   );
 }
