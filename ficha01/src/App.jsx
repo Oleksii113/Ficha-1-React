@@ -3,6 +3,7 @@ import { useState } from "react";
 function App() {
   const [temaEscuro, setTemaEscuro] = useState(false);
   const estilos = {
+    minHeight: "100vh",
     backgroundColor: temaEscuro ? "#1f2937" : "#f3f4f6",
     color: temaEscuro ? "#f9fafb" : "#111827",
   };
