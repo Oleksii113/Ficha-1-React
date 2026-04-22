@@ -34,6 +34,12 @@ function App() {
           value={nome}
           onChange={(event) => setNome(event.target.value)}
         ></input>
+         <input
+          type="text"
+          placeholder="Escreve o teu ultimo nome"
+          value={nome}
+          onChange={(event) => setNome(event.target.value)}
+        ></input>
         <button type="submit">Adicionar</button>
       </form>
       <h2>A bela da lista de nomes</h2>
