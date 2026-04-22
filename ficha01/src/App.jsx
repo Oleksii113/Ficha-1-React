@@ -13,13 +13,10 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (!nome) return;
+    if (!nome && !ultimoNome) return;
     setNome(nome);
-    setNomes((nomesAnteriores) => [...nomesAnteriores, nome +  ultimoNome]);
-    setNome("");
-    if (!ultimoNome) return;
     setNome(ultimoNome);
-    setNomes((nomesAnteriores) => [...nomesAnteriores, ultimoNome]);
+    setNomes((nomesAnteriores) => [...nomesAnteriores, nome + ultimoNome]);
     setNome("");
   };
 
