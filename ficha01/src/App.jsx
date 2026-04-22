@@ -7,7 +7,7 @@ function App() {
     color: temaEscuro ? "#f9fafb" : "#111827",
   };
   return(
-    <main>
+    <main style={estilos}>
       <h1>Hello lindinios!</h1>
       <p>O Pedro é....</p>
       <buttton onClick={() => setTemaEscuro(!temaEscuro)}>
