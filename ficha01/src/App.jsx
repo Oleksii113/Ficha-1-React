@@ -7,14 +7,22 @@ function App() {
     backgroundColor: temaEscuro ? "#1f2937" : "#f3f4f6",
     color: temaEscuro ? "#f9fafb" : "#111827",
   };
-  return(
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (!nome) return;
+    setNome(nome);
+  };
+
+  return (
     <main style={estilos}>
       <h1>Hello lindinios!</h1>
       <p>O Pedro é....</p>
       <buttton onClick={() => setTemaEscuro(!temaEscuro)}>
         Mudar Tema
       </buttton>
-      <form onSubmit={}>
+      <p>Ola {nome}</p>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Escreve o teu nome"
