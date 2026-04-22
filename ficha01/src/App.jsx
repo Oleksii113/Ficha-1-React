@@ -15,7 +15,7 @@ function App() {
     event.preventDefault();
     if (!nome) return;
     setNome(nome);
-    setNomes((nomesAnteriores) => [...nomesAnteriores, nome]);
+    setNomes((nomesAnteriores) => [...nomesAnteriores, nome, ultimoNome]);
     setNome("");
     if (!ultimoNome) return;
     setNome(ultimoNome);
