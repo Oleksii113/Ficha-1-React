@@ -2,6 +2,9 @@ import { useState } from "react";
 
 function App() {
   const [temaEscuro, setTemaEscuro] = useState(false);
+  const [nome, setNome] = useState("");
+  const [ultimoNome, swtUltimoNome] = useState("");
+  const [nomes, setNomes] = useState([]);
   const estilos = {
     minHeight: "100vh",
     backgroundColor: temaEscuro ? "#1f2937" : "#f3f4f6",
@@ -12,24 +15,28 @@ function App() {
     event.preventDefault();
     if (!nome) return;
     setNome(nome);
+    setNomes((nomesAnteriores) => [...nomesAnteriores, nome]);
+    setNome("");
   };
 
   return (
     <main style={estilos}>
       <h1>Hello lindinios!</h1>
       <p>O Pedro é....</p>
-      <buttton onClick={() => setTemaEscuro(!temaEscuro)}>
+      <button onClick={() => setTemaEscuro(!temaEscuro)}>
         Mudar Tema
-      </buttton>
+      </button>
       <p>Ola {nome}</p>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Escreve o teu nome"
           value={nome}
-          onChange={(event) => setHome(event.target.value)}
+          onChange={(event) => setNome(event.target.value)}
         ></input>
+        <button type="submit">Adicionar</button>
       </form>
+
     </main>
   );
 }
