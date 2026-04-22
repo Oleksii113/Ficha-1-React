@@ -14,6 +14,14 @@ function App() {
       <buttton onClick={() => setTemaEscuro(!temaEscuro)}>
         Mudar Tema
       </buttton>
+      <form onSubmit={}>
+        <input
+          type="text"
+          placeholder="Escreve o teu nome"
+          value={nome}
+          onChange={(event) => setHome(event.target.value)}
+        ></input>
+      </form>
     </main>
   );
 }
